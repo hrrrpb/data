@@ -1,0 +1,115 @@
+Secret-key cryptography
+
+conventionl/private-key/single-key/symmetric
+
+eg. DES  3DES   AES
+
+AES replacement of DES
+
+Limitation of secret-key cryptography: 
+
+exchange secret key securely
+courier
+key distribution center:  session keys
+public-key crypotography
+
+
+----------------------------
+Public-key cryptography
+
+Solve problem of securely exchanging secret keys ahead of time
+Asymmetric:  Use two inversely related keys 
+        public key   freely distributed
+        private key  kept secret by its owner
+
+eg RSA Diffie-Hellman
+
+----------------------------
+
+Advantage of public key crypto
+
+   no key exchange ahead of time
+   slow due to algorithms 100-1000x slower compared with secret-key crypto
+
+----------------------------
+Hybrid Cryptosystems
+   Use secret-key to encrypt data
+   Use public-key to exchange secret key
+
+----------------------------
+Access control
+   Done once before user can use the system
+   Authentication: password, biometrics, smart cards
+   
+   Virtual Circuit 
+      circuit gets established
+-----------------------------
+   Message authentication 
+   send both plaintext and cipher text to check the secret key
+-----------------------------
+   Digital Signatures
+
+Want to electronically sign a document
+
+
+-------------------------------
+Crypotographic hashing
+
+bit manipulation , so fast
+Hash function is public, used in a digital signature, H(M) as a representation of "M"
+
+M, encrypt H(M)
+
+weakness: find M' with same hash value of M
+Hash function : nearly 0 collisions
+eg MD5
+
+-------------------------------
+Cryptanalysis
+
+C=Ek (M) 
+BG wants the message or secret key
+
+Types of attacks:   
+
+   ciphertext only: can identify plaintext M when he sees it
+
+   known plaintext: knows one or more M, C pairs
+
+   chosen plaintext:  
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+      
+   
+
+
+
+
+   
+
+
+
+
+
+

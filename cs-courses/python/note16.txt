@@ -1,0 +1,57 @@
+web database demo : 
+
+----------------------
+objects , classes
+
+
+all functions inside a class has at least one parameter: self
+
+Class Name() :
+    statements
+    def __init__(self, parameters) :    
+        xxxxx
+
+
+e.g.
+
+Class CustomerRecord() :
+    def __init__(self, data) :
+        self.firstname = data[0]
+        self.lastname = data[1]
+        self.street = data[2]
+        self.city = data[3]
+        self.id = data[4]
+
+    def __del__(self) :
+        #if your object has links to other objects
+        #you need to destroy others before you destroy yourself
+        # simple variables do not need destructor
+
+    def __str__(self) :
+        #create string version of the object, for e.g. printing
+
+    
+
+customer = CustomerRecord(["Yi","Xue","36 Main St","New Haven","0"])
+print (customer.firstname)
+customer.firstname = "Barney"
+customer.age = 42  (only extra for the current object)
+
+default: public attributes
+
+to make it private, double underscore
+self.__secret = 127
+
+thus, you can not print(customer.__secret)
+
+another example:
+secret = 127    local variable
+cannot access outside
+
+
+
+    
+  
+
+
+

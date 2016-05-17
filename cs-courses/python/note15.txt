@@ -1,0 +1,47 @@
+accessing database
+
+SQL as query language
+
+Several database modules in python : 
+
+sqlite3
+
+make a connection to database : 
+conn = sqlite3.connect(filename)
+
+create cursor to walk around :
+curs = conn.curor()
+
+Done with modifications:
+conn.commit()
+
+
+All done:
+conn.close()
+
+
+Executions:
+curs.execute("sql command")
+curs.executemany("sql command", list of records)
+
+e.g. insert multiple records, no hard coding the records in sql statement
+INSERT INTO tablename (age, name, payrate) VALUES (?, ?, ?)
+THE LIST OF records contains the 3 fields data
+
+
+
+
+3 basic statements:
+CREATE tablename (age integer, name text, payrate float)
+
+INSERT INTO tablename VALUES(42, "Fred Flintstone", 10.50)
+
+SELECT * FROM tablename WHERE age > 50 AND payrate < 12.00 ORDER BY payrate ASC/DESC
+
+
+
+
+ 
+
+
+

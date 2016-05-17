@@ -1,0 +1,62 @@
+Attacks classification 
+  - Passive threats:  release of message contects, traffice analysis
+  - Active threats : masquerade ,replay, modification of message contents, DOS
+
+
+Protocols : 
+  - Cryptographic protocols
+
+Trusted third parties
+  - Aka arbitrators
+
+Steps for providing security services
+
+Security facilities in the TCP/IP protocol stack
+
+Steganography
+  - hides existence of message
+  
+
+One-time pad[MS]
+  - Modified from Mark Stamp
+  - A provably secure cipher
+  - impractical for most applications. 
+  - P, C, K are all equally long bit strings
+    C = P XOR K, how to recover P?  C XOR K = P
+
+
+Substitution/Transposition Ciphers
+  - Substitution: where letter replaced by other letters
+  - Transposition (aka permutation) ciphers
+      - rearranging the letter order
+  - Modern secret key crypto uses both
+
+
+Rail Fence Cipher
+  - write message letters out diagonally over a number of rows
+  - then read off cipher row by row
+
+Row Transposition Ciphers
+  - write letters out in rows, reorder the columns according to some key, read off the columns
+
+Product Ciphers
+  - use several ciphers in succession to make more complex
+
+Math Preliminaries: 
+  - Ceiling  int >= x
+  - Floor    int <=x
+  - sum, product 
+  - factorial
+  - exponential 
+  - log
+
+
+
+
+
+
+
+ 
+
+
+   

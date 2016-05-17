@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Map Direction Server</title>
+<link rel="stylesheet" type="text/css" href="theme.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<h1>Welcome to the Map Direction Server</h1><br>
+<p>Please enter locations to get route.</p>
+<form method="POST" id="directionForm">
+	<div>
+		<input type="radio" name="service" value="google"> 
+		<b>Google Map</b> 
+		<input type="radio" name="service" value="mapquest"> 
+		<b>MapQuest</b> 
+	</div>
+
+	<div class = "block">
+		<label>From :</label>
+		<input type="text" name='from' >
+	</div>
+	<div class = "block">
+		<label>To :</label>
+		<input type="text" name='to'>
+	</div>
+
+	<div class = "block">
+		<button type ="submit" name ="submit" >Submit</button>
+	</div>
+</form>
+
+<script>
+$(document).ready(function(){
+	$("button").click(function(ev){
+		
+		ev.preventDefault()
+        $.ajax({type: "POST",
+                data: $("#directionForm").serialize(),
+                //dataType: "text",
+                complete:function(result){
+                	console.log(result.responseText);
+                	
+                	
+                    $("#response").html(result.responseText);
+        }});
+
+    });
+
+});
+</script>
+
+<div id="response">
+</div>
+
+
+
+</body>
+</html>

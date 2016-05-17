@@ -1,0 +1,34 @@
+Published / restricted algorithms
+
+Restricted:  keep algorithm secret
+
+Published:  make algorithm public
+
+Crypotosystem properties:
+No loss of information
+Speed
+Security
+   unconditional security: cipher cannot be broken
+   computational security: limited computing resources, cipher cannot be broken
+
+Moore's Law : 18 months, double speed
+
+Monoalphabetic Cipher
+-Plain text letter maps to a different random ciphertext letter
+
+# keys = 26!   huge number, not practically do-able
+
+Services, algorithms, assumption
+-Services: what do we want as users
+      And what kind of algorithms will work
+
+ eg ordering over amazon
+    message authentication 
+    confidentiality
+    
+
+
+
+         
+
+

@@ -1,0 +1,8 @@
+target=MyClass1
+symbolic.method=MyClass1.myMethod(sym#sym)
+classpath=${jpf-symbc}/build/examples
+search.multiple_errors=true
+sourcepath=${jpf-symbc}/src/examples
+listener = .symbc.SymbolicListener
+vm.storage.class=nil
+

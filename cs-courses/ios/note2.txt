@@ -1,0 +1,62 @@
+"-" instance method
+
+Dot notation : does not allow id type (dynamic type) 
+
+Cocoa Touch is a collection of objective-C classes
+
+ANSI C w/
+classes
+class and instance methods
+method invocation (call messaging)
+blocks
+extensions (protocols and categories)
+properties 
+
+object-c is case sensitive
+
+.h - interface files (public properties)
+.m - implementation file (as well as private properties)
+.mm - implementation file with also c++ code
+
+NSObject - everything inherited from
+It is part of the Foundation Framework of Cocoa
+
+NSNumber : derived from NSObject and NSValue
+           int/long/short/float/double/char
+
+BOOL: not an object, actually a primitive data type, represents YES or NO, not true/false, not 1/0
+      actual value is 0 for NO, and all others for YES
+
+NSString /NSString : both are an array of Unicode characters
+
+NSData : byte buffers, hold static buffers, limited to 8 ExaBytes (8,000TB)
+NSMutableData :  holds dynamic buffers
+
+Dictionary : very efficient way to retrieve data, not great for storing
+Enumeration: 
+Arrays: hold an ORDERED COLLECTION of OBJECTS
+
+Nil in Object-C means nothing
+NSNull
+
+_xxx , or self.xxx, referencing properties defined in .h
+
+#import <UIKit/UIKit.h>
+
+@interface QuizViewController : UIViewController
+inherit a class from UIViewController
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+

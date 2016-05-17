@@ -1,0 +1,56 @@
+03/22/2016
+
+code demo continued
+
+import urllib.request as urlr
+import re
+import os
+import sys
+
+
+urlset = set()
+url = sys.argv[1]
+urlset.add(url)
+
+urlobject = urlr.urlopen(url)
+
+if urlobject.getcode() == 200 :
+    textlines = urlobject.read()
+    textlines = textlines.decode("utf-8")
+    
+    reobject = re.compile(r'href="(https?://[-.a-zA-Z0-9/]{4,})"')
+    
+    for urls in reobject.findall(textlines) :
+        if urls.startwit(url) and not urls in urlset :
+            urlset.add(urls)
+            print(urls)
+else :
+    print(url, " is not a valid web page.")
+
+
+########################################
+rewrite it today and make it recursive
+########################################
+
+reobject = re.compile(r'href="(https?://[-.a-zA-Z0-9/]{4,})"')
+urlset = set()    
+
+def findallurls(url):
+    
+    urlobject = urlr.urlopen(url)
+
+    if urlobject.getcode() == 200 :
+        textlines = urlobject.read()
+        textlines = textlines.decode("utf-8")
+    
+        for urls in reobject.findall(textlines) :
+            if urls.startwit(url) and not urls in urlset :
+                urlset.add(urls)
+                print(urls)
+                findallurls(urls)
+    else :
+        print(url, " is not a valid web page.")
+
+# if adding another group before
+
+if urls[1].startswith(url) and not urls[1] in urlset

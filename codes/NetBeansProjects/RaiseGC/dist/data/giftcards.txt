@@ -1,0 +1,4 @@
+best buy : 4
+staples : 7
+target : 4
+walmart : 4

@@ -1,0 +1,54 @@
+
+body {
+	font-family :"Comic Sans MS", cursive, sans-serif;
+	font-weight: bold;
+}
+
+label {
+	display: inline-block;
+  	width: 80px;
+  	text-align: right;
+	
+}
+
+input[type="text"] {
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    line-height : 25px;
+    width: 250px;
+
+}
+
+.block {
+	margin-top : 10px;
+}
+
+
+
+button{
+	cursor:pointer; 
+padding:5px 20px; 
+background: lightgray; 
+border:1px solid black; 
+
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+/*give the button a drop shadow*/
+-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+box-shadow: 0 0 4px rgba(0,0,0, .75);
+/*style the text*/
+color:black;
+font-size:1.1em;
+font-weight: bold;
+}
+
+#response{
+	margin-top: 20px;
+	color: blue;
+	font-weight: normal;
+
+}

@@ -1,0 +1,77 @@
+demo of code for functions:
+
+list-sort
+
+[first, last, age]
+
+last , first
+
+def namemerge(item) : 
+    return item[1]+","+item[0]
+
+L.sort(key = namemerge)
+
+def sort(key=-1,.... ) :
+    if key== -1 :
+        if list[i]<list[j]
+    else :
+        if key(list[i])< list(list[j])
+
+---------------------
+String functions
+
+.upper()
+.lower()
+.strip()
+.lstrip()
+.rstrip()
+.split()
+.join()
+
+L = s.split(",")
+s =","join(L)
+
+
+.find()   left to right 
+substring, startindex, endindex
+return index, or -1 if not found
+
+.rfind()  right to left
+
+.replace(newtext, oldtext, num)
+generate a new string
+
+.startswith(sub)
+.endswith(sub)
+
+.isalpha()
+.isdigit()
+.isupper()
+.islower()
+
+
+demo : manipulation of a file
+changing account name in passwd file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+yi@yi-Inspiron-5437:~/codes/python/midterm$ ./mideterm-yxue2.py p1.txt p2.txt p3.txt
+Inconsistent data found, delete the record
+Count of poll for 1 : 4
+Voted for 1 list:  ['bob lee', 'cheng lin', 'chang ning', 'yi xue']
+Count of poll for 2 : 4
+Voted for 2 list:  ['simon ady', 'ted bill', 'xiaofeng li']
+yi@yi-Inspiron-5437:~/codes/python/midterm$ 
+

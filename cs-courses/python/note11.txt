@@ -1,0 +1,65 @@
+os.stat()
+get the file status
+
+return os.stat_results object
+st_uid, st_size, st_ctime, st_atime_ns, st_gid, etc
+
+pwd module
+the password database
+
+
+demo : find big file and print out the owner info
+--------------------------------
+findbigfile.py
+
+#!/usr/bin/python3
+
+import os
+import pwd
+import sys
+
+searchdir = "/"
+searchsize = 10000000
+
+if len(sys.argv)> 1 :
+    if os.path.exists(sys.argv[1]) and os.path.isdir(sys.argv[1]):
+        searchdir = sys.argv[1]
+    else :
+        print("Bad directory name: ", sys.argv[1], ", using default /")
+
+    if len(sys.argv) == 3 : 
+       if int(sys.argv[2])>0 :
+           searchsize = int(sys.argv[2])
+       else :
+           print ("Bad size: ", int(sys.argv[2]), ", using default 10,000,000")
+   
+   if len(sys.argv)>3:
+       print("Extra arguments being ignored.")
+
+
+for(pathnow, dirs, files) in os.walk(searchdir,followlinks = True) :
+    for file in files :
+        filestats = os.stat(os.path.join(pathnow,file))
+        if filestats.st_size > searchsize :
+            pwdentry = pwd.getpwuid(filestats.st_uid)
+            owner = pwdentry.pw_name
+            print("Filename: ", os.path.join(pathname, file", " size: ", filestats.st_size, " Owner: ", owner)
+
+
+
+            
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+

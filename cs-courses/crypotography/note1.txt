@@ -1,0 +1,26 @@
+contact:   bcdefend-1@yahoo.com
+Barun Chandra
+
+Introduction
+
+Cryptography: 
+Encrypting and decreypting data
+Transform data by cipher or cryptosystem
+
+Covers: algorithms, protocols, services, applications
+
+Secret-key model
+
+plaintext input -> secret key shared by sender and recipient, encryption -> transmitted ciphertext -> decryption -> plaintext output
+
+SGG Secret-Key Cryptography
+
+Caesar Cipher: substitution cipher  replace each letter by kth letter on
+cat+3 = FDW
+
+cipher - algorithm
+C = E(M), M = D(C)
+
+crypptanalysis (code breaking) - how to decipher the ciphertext w/o knowing the key 
+
+

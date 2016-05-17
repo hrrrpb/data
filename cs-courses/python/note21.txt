@@ -1,0 +1,16 @@
+PIL - Python Image Library
+
+PIL.Image
+PIL.ImageTk
+
+size(width, height)
+mode : color, grayscale, etc
+       "RGB", "L"
+
+get image: 
+.open(filename)
+
+
+PhotoImage(image) : convert PIL image to PIL imagetk format
+
+tk : canvas.createimage

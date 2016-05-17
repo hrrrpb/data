@@ -1,0 +1,7 @@
+canvas
+
+threads
+
+multiple balls bouncing around
+
+create a single object on canvas, move around, and animation

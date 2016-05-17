@@ -1,0 +1,163 @@
+Learn some new modules
+
+Command line arguments
+
+import sys
+
+sys.argv -> list of command line arguments as strings
+
+The first string not included (which could be the python3 ,or the name of the code)
+
+
+
+import os
+import os.path
+
+os.chdir(name)
+absolute path: /xx/xxx/xx
+relative path:  ./  or ../
+
+os.getcwd()
+current working directory
+
+os.path.isabs(path)
+
+os.path.join(os.getcwd(), filename)
+given two parts, and glue together
+
+os.path.split(name) -> list[path, filename]
+
+os.listdir(path) -> list of nonhidden files or directories??
+hidden files, start with . , such as .bashrc
+relatively names
+//I tested, will list all things in a directory, except . and ..
+
+os.path.isdir(path)
+        isfile(path)
+        isline(path)  symbolic link or shortcut
+
+os.path.exists(path)
+
+file permissions - kept in inode
+read/write/execute
+
+os.chmod(path, mode)
+
+rwx    rwx    rwx
+owner  group  others
+
+111    111    111
+7      7      7
+
+Oo777: fully access file in the system
+(octo)
+
+os.chown(path, owner, group)  change owner
+specified by id names
+extract from password file
+
+
+import shutil (shell utility)
+copy files
+
+shutil.copy(old, new)
+shutil.move(old, new)
+
+rename a file:
+os.rename(old, new)
+
+copy directory
+   os.mkdir(path)
+   os.rmdir(path): can only delete empty directory
+
+demo code: 
+
+findext.py
+
+import sys
+import os
+
+
+def recsearch(directoryname) :
+    contents = os.listdir(directoryname)
+    for item in contents :
+        if os.path.isfile(item) :
+            if item.endswith(searchext) :
+                print(item)
+        elif os.path.isdir(item) :
+            recsearch(item)
+
+
+
+searchdir='/'
+searchext = ".txt"
+
+if len(sys.argv[0]) > 0: 
+    if os.path.exists(sys.argv[0]) and os.path.isdir(sys.argv[0]) :
+        searchdir = sys.argv[0]
+    else :
+        print ("Bad directory name : ", sys.argv[0], ", using default /")
+
+    if len(sys.argv) ==2 : 
+        if sys.argv[1][0] =="." and len(sys.argv[1]) >1 :
+       
+            searchext = sys.argv[1]
+
+    else :
+        print ("Bad extension:", sys.argv[1], ", using default .txt")
+
+    if len(sys.argv)>2 :
+        print("Extra argument being ignored.")
+
+recsearch(searchdir)
+
+def recsearch2(directo:ryname) :
+    contents = os.listdir(directoryname)
+    for item in contents :
+        if os.path.isfile(item) :
+            if item.endswith(searchext) :
+                print(item)
+        elif os.path.isdir(item) :
+            os.chdir(item)
+            recsearch2(item)
+            os.chdir("..")
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+

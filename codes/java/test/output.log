@@ -1,0 +1,41 @@
+yi@yi-Inspiron-5437:~/codes/python$ python Prog1-yxue2.py 
+Calculator
+
+Pleaes input calculation operation ('q' for quit) :
+23+5.5
+
+Output: 23+5.5 = 28.5
+Pleaes input calculation operation ('q' for quit) :
+32- 7
+
+Output: 32- 7 = 25
+Pleaes input calculation operation ('q' for quit) :
+33.2*8
+
+Output: 33.2*8 = 265.6
+Pleaes input calculation operation ('q' for quit) :
+23/0.0
+Zero Division Error.
+Pleaes input calculation operation ('q' for quit) :
+34.7/21
+
+Output: 34.7/21 = 1.65238095238
+Pleaes input calculation operation ('q' for quit) :
+22**5
+
+Output: 22**5 = 5153632
+Pleaes input calculation operation ('q' for quit) :
+22*0
+
+Output: 22*0 = 0
+Pleaes input calculation operation ('q' for quit) :
+22**0
+
+Output: 22**0 = 1
+Pleaes input calculation operation ('q' for quit) :
+q
+
+
+yi@yi-Inspiron-5437:~/codes/python$ 
+
+

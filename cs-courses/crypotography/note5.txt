@@ -1,0 +1,75 @@
+Monoalphabetic Cipher [B]
+
+shuffle the letters arbitrarily
+
+Cipher keys:
+26! = 4 x 10^26
+
+language characteristics : frequency analysis 
+
+which letter most commonly used in english: E
+
+e t a o s n ...
+
+standard table of single letter frequencies
+
+check single letter first, then diagram..
+
+
+Mod/Matrices
+
+a mod b = c
+a = c mod b
+
+eg 
+7 mod 3  + 5 mod 3 mod 3 = 0
+7 + 5 mod 3 = 0
+
+same rule applies to  - and *, and **
+
+
+
+-1 mod 3 = 2
+-> 3 - 1 mod 3 = 2
+
+identity matrix
+matrix inversion
+
+
+Hill Cipher [modified MS]
+
+a pre-modern block cipher
+
+groups of letter are mapped to other groups of letters
+
+plaintext, p0, p1, p2, .....
+each pi : block of n consecutive letters
+   - as a column vector
+
+Let K be n x n invertible matrix mod 26
+ci = K pi (mod 26)
+decryption:  pi = K-1 ci (mod 26)
+
+
+The matrix is the Key
+
+- get away from frequency analysis
+- get away from linear 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

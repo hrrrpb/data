@@ -1,0 +1,31 @@
+Python attributes:
+ scripting language - shorter programs
+ Interpretive - portability, less efficient
+ Simple, clear - syntax
+ Many application areas - lots of packages
+ Quicker development
+ Objecct-oriented
+
+Basic data types  (variable is pointer)
+
+Numbers - integers, floating point, complex, boolean
+  e.g. a = 10 , a refereces integer object 10
+	spaces not critical, no semi colon after statement
+        objects in python not immutable
+        b = 10, pointing to the same integer object 10
+        a = 5, system creates a new integer object of 5, and makes a pointing to        the new object
+        unused objects recycled by garbage collection, tagged for garbage 
+        collection.
+Integer - in C, - 2 billion to 2 billion, 2 power 32 
+          in python, no limit, infinite length
+          +/- digits
+          Hex OxFA
+	  Octal Oo72
+          Binary Ob0011
+          +, -, *, /(keep fraction part), //(chop off fraction), %, 
+          **(exponentiation)
+Floats - 64 bit   10.5e+04
+          /, //(see above)
+Boolean - True, False
+
+

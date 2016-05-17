@@ -1,0 +1,54 @@
+Compound data types: list and tuple
+
+tuple:  immutable
+list:   flexible
+
+Lists - collection of objects(references to objects)
+        objects can be of different types
+	mutable - can change individual reference
+
+        Syntax [ ]
+        []  empty list
+        L = [1, 2.5, "a"]   a list of 3 references
+        len(L) : count of items
+        L(1) returns the 2.5
+        L(1) = 5
+        
+	Add / remove object
+        m = [ 7, 10, "b"]
+        L = L + m      concatenate both lists, creating a totally new list object 
+	
+	L.extends(m)   similar function, my guess is the same object, but elongated list
+        L.append("c")  append c to the list
+        L.append(m) append m to the list
+        
+        L.insert(1, "a")   index, and object reference
+        L.remove(2.5)  find the first occurance of 2.5, and remove
+        del L(2)  2: index position
+        
+        L.index(2.5)  return the index value
+                      if not found, return none(instead of -1 in most languages)
+        L.count(2.5)  return the count of object in the list
+	L.reverse()   reverse the order
+        L.sort()   default asenceding order
+                   L.sort(reverse=True)  descending order
+        T=sorted(L)  pass a list, create a new sorted list, L is intact
+        
+	T=L[:]       make new copy L, shallow copy
+        
+        for deep copy, have to use another library called copy
+        import copy
+        T = copy.deepcopy(L)
+        can work with list, tuple, set , dictionaries, etc. 
+	
+	
+	* : L * 3  -> new list with 3 copies of L
+	max(L), min(L) : return max ,and min values
+
+
+
+
+                
+
+
+

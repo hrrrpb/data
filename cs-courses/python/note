@@ -1,0 +1,154 @@
+WSGI - web server gateway interface
+
+package  wsgiref.simple_server
+
+srv = wsgiref.simple_server.make_server(ip address ,port ,webapp)
+"" means all net interfaces on the server
+port: 80
+
+srv.serve_forever()
+
+def myWebApp(environ, start_response) :
+
+environ: input info dictionary format
+
+start_response : call back function, create header
+
+
+start_response(string, list)
+string: status, e.g. "200 ok"
+list: describe body content  , eg [('Content-type',"text/plain or html", charset = "utf-8"),('Content-length', str(175))]
+
+environ['REQUEST_METHOD'] -> GET , POST
+
+if environ['REQUEST_METHOD'] == "GET" :
+   response = "This is my web page"
+   byte_response = bytes(response, 'utf-8')
+   start_response(...)
+   return [byte-response]
+
+
+create html form.....
+
+
+retrieve the post input
+
+datalen =int(environ['Content-Length'])
+environ['wsgi.input'].read(datalen)
+
+data = data.decode('utf-8')
+
+parse the data using module method
+import cgi
+datadict = cgi.parse_qs(data)
+print("City = ", datadict['city'], "State = ", datadict['state'])
+
+
+########################
+write a server for weather info, take input from user, of city and state, return the current weather info
+########################
+
+#!/usr/local/bin/python3
+
+import wsgiref.simple_server as wg
+import cgi
+import urllib.request as urlr
+import json
+
+
+def MyWebApp(environ, start_response) :
+    
+    if environ['REQUEST_METHOD'] == "GET" :
+        response = """
+                   <html>
+                   <head>
+                   <title>My Weather Server</title>
+                   </head>
+                   <body>
+                   <h1> Welcome to the weather server</h1><br>
+                   Please enter the city and state to get current conditions.<br>
+                   <form method = 'POST>
+                   <br><b>City: </b><input type ='text' name ='City'>
+                   <br><b>State : </b><input type ='text' name = 'State'>
+                   <button type = 'submit'>Submit
+                   </form>
+                   </body>
+                   </html>"""
+        response = bytes(response, 'utf-8')
+        resplen = len(response)
+        
+        status = "200 ok"
+        headers = [('Content-type','text/html, charset = utf-8'),('Content-length',str(resplen))]
+        start_response(status, headers)
+        return [response]
+
+    elif environ['REQUEST_METHOD'] == "POST" : 
+        print("received a post"])
+        #using the previously written code of weather data
+        
+
+    else :
+
+    
+
+
+
+
+
+srv = wg.make_server("",8080, MyWebApp)
+srv.serve_forever()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

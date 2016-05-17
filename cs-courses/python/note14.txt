@@ -1,0 +1,108 @@
+03-24-2016
+
+JSON/XML data format
+
+simple database, query
+
+XML : Extensible markup language
+
+Tags 
+e.g.  <menu> </menu>  -> root
+<menu style = "italic">  attributes
+  <item> pancakes </item>
+  <breakfast>
+      <item> juice </item>
+  </breakfast>
+</menu>
+
+some libaries deals with XML parse
+
+import xml.etree.ElementTree as et
+root = et.fromstring(string) #directlly parse into element
+
+or
+
+xmldata = et.parse(string)
+root = xmldata.getroot()
+
+root.tag
+root.attrib  -> dictionary
+root.text
+
+root.attrib['style'] -> 'italic'
+
+root[0] -> first sub object,  <item>
+root[1][0] -> item inside breakfast
+
+
+for item in root.iter(tagname) : #find all tag name occurences
+   ......
+
+
+JSON : javascript object notation
+
+json.loads(string)
+
+
+
+
+--------------------------------------------------------------------
+Demo:
+
+
+#!/usr/local/python3
+import sys
+import urllib.request as url
+import xml.etree.ElementTree as et
+
+
+apicode = "xxxxxxxxxxxxx"
+zipcode = sys.argv[1]
+
+if len(zipcode) == 5 and zipcode.isdigit() :
+    urlquery = "http://api.openweathermap.org/data/2.5/weather?zip="+zipcode+", us&mode=xml&units=imperial&APPID="+apicode
+    
+    page = url.urlopen(urlquery)
+   
+    if page.getcode() == 200 :
+        weatherstring = page.read()
+        weatherstring = weaterstring.decode("utf-8")
+        weatherdata = et.fromstring(weaterstring)
+        
+        for item in weatherdata[0]        
+      
+
+    else:
+        print("No valid response from weather server")
+
+
+
+
+else :
+    print(zipcode, " is not a proper zipcode. Try again. ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

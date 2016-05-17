@@ -1,0 +1,27 @@
+tkinter - GUI module
+
+import tkinter
+
+create the root window
+
+rootwindow = tkinter.Tk()
+rootwindow.title("My title")
+rootwindow.config(width = 500, height = 400, bg = 'purple')
+tkinter.mainloop()
+
+example :
+
+simplegui.py
+
+#!/usr/bin/python3
+
+import tkinter
+
+rootwindow = tiinter.Tk()
+rootwindow.title("My title")
+rootwindow.config(width =500, height = 400, bg = 'purple')
+
+tkinter.mainloop()
+
+
+

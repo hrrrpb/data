@@ -1,0 +1,93 @@
+Initial Value : can use timestamp
+
+ECB vs CBC
+
+IV: inital value or vector
+
+CBC, chaining makes the switch and replacement not do-able
+
+CBC: encryption can not be done in parallel, decryption can be done in parallel
+     random access for decryption
+
+error tolerance of CBC: 
+
+  encryption: 1 bit changed, affected locally
+
+  bulk data encryption
+  authentication
+
+OFB : output feed back
+one-time pad with pseudorandom numbers
+
+fault tolerance: only locally, good for noisy channel
+
+steam cipher
+weakness: intercept and get the random code, and create fake message
+
+--------------------------------------
+Combining block ciphers
+
+why? double des or triple des
+method is not robust enough, repeat , get more secure
+differnt keys
+
+C= EK2[EK1[P]]
+
+112 bits or 168 bits
+
+why not double-des
+
+meet-in-the-middle attack
+
+triple DES: could be 2 or 3 keys
+E-D-E sequence
+advantage:  for compatiblity with old DES   backwards compatibility
+standardized in ANSI X9.17 
+
+USED IN PGP, S/MIME
+
+IS SLOW
+
+
+----------------------------------
+Public-key cryptography
+
+no need to exchange key in advance
+very slow
+
+public key
+secret key
+
+
+- easy to generate keys
+- computationally easy to en/decrypt the message
+- computationally infeasible to find decryption key knowing only algorithms and encryption key
+- one way function
+- digital signatures
+
+
+one-way function:
+y = f(x)
+known x, get y easily
+
+x = f-1(y)
+known y, cannot get x
+
+trap door: extra info I
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

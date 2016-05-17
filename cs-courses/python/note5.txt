@@ -1,0 +1,83 @@
+Tuple: Immutable list
+
+A = (1, 2)
+A=1,
+A=(1,)
+A=()
+
+Set: unique item, mutable, item can be  of different types
+A = {1,2,3}
+A = {1,2,1,3,2} in fact turned into {1,2,3}
+
+Intersection &: in both sets
+Union |  : 
+Difference - :   s-t    new set in s but not in t
+Symmetric Difference ^ : exclusive OR   new set in s or t but not both
+Subset check <= :
+Superset check >= :
+
+e.g.
+A= {1,2,4,7,12}
+B = {2,6,7,11,12}
+A&B ={2,7,12}
+A|B = {1,2,4,6,7,11,12}
+A-B ={1,4}
+A^B ={1,4,6,11}
+
+A.intersection(B)
+A.add(13)
+
+A=set()  : create empty set
+A.remove(12)
+7 in A
+
+
+Dictionary
+hashing table - not a sequence
+Item is a key, value pair (key is the index)
+value can be any type
+
+{} empty dictionary
+D={"Tom":52, "Fred":17, "Harry":35}
+D["Fred"] -> 17
+D["Fred"] = 25   modify the value
+D["Bob"]=1   add new item
+del D["Tom"] : remove entry
+D.update(E) : take contents of E, add to D
+
+--------
+generator vs iterator
+D.keys() 
+D.values()
+D.items()
+
+for key in D.keys():
+    .....
+
+for key, value in D.items():
+    ....
+
+list(D.keys()) : create the list of keys
+
+valid keys: any immutable value
+            tuples, int, string, float 
+            cannot use set, list ,dic as they are mutable
+
+
+len(D) : how many pairs
+D2 = D.copy() :  make a copy of D, and set to D2, deep copying
+
+D.get(key, defaultvalue)
+D.get("Bob", -1) : if bob in return the value, otherwise, return -1
+if no -1 return none
+
+None instead of Null is used in python.
+
+
+
+ 
+
+
+
+
+

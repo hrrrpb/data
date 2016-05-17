@@ -1,0 +1,43 @@
+yi@yi-Inspiron-5437:~/codes/python/crypto$ ./RSAattack.py
+RSA attack demo:
+Please input public key, n, and ciphertext, separeted by space : 7 15 4
+Factor attack output: 
+p = 3
+q = 5
+d = 7
+M = 4
+Used time in miliseconds :  0.04200000000000037 
+
+Discrete log attack : 
+M =  4
+Used time in miliseconds :  0.009999999999999593 
+
+Do you want to quit ? y for quit, all other keys for continue :  
+Please input public key, n, and ciphertext, separeted by space : 13 527 289
+Factor attack output: 
+p = 17
+q = 31
+d = 37
+M = 51
+Used time in miliseconds :  0.04300000000000137 
+
+Discrete log attack : 
+M =  51
+Used time in miliseconds :  0.13200000000000017 
+
+Do you want to quit ? y for quit, all other keys for continue :  
+Please input public key, n, and ciphertext, separeted by space : 2003 2511739 1978837
+Factor attack output: 
+p = 1249
+q = 2011
+d = 1202267
+M = 950
+Used time in miliseconds :  231.431 
+
+Discrete log attack : 
+M =  950
+Used time in miliseconds :  354.43699999999995 
+
+Do you want to quit ? y for quit, all other keys for continue :  y
+
+

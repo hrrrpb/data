@@ -1,0 +1,50 @@
+newobject = Name()
+
+class Name() :
+    cvar = 10   # class variable
+   
+    def __init__(self, ...) :
+        self.name = "test"     #instance variable
+
+
+changes cvar, changes for all instances
+Name.cvar = 11
+
+
+
+    def __eq__(self, other) :
+        return self.name == other.name
+
+Newobject == Newobject2
+evoke eq function
+if no eq, exception raised
+
+   
+Inheritance
+
+class Name(Parent) :
+   def __init__(selse, ...., newa) :    override
+       super().__init(self,....)
+       self.newattr = newa
+
+
+
+Web servers
+
+  http.server
+
+  srv = http.server.HTTPServer((ip addr,port),requestHandler)
+  srv.serve_forever()
+
+  
+  class OurRequestHandler(http.server.BaseHTTPRequestHandler) :
+      def do_GET(self) :
+          self.send_response(200)
+          self.end_headers()
+          source = "<h1> This is our website</h1>"
+          self.wfile.write(bytes(source,"utf-8"))
+          return
+          
+
+       
+     

@@ -1,0 +1,45 @@
+yi@yi-Inspiron-5437:~/codes/python/prog3$ ./prog3-2_yxue2.py
+Timing data for 100.txt
+list sorting time in ms :0.12826919555664062
+binary search time in ms: 0.8463859558105469
+
+dictionary creation time in ms : 0.11682510375976562
+dictionary search time in ms : 0.08416175842285156
+-----------------------
+Timing data for 1000.txt
+list sorting time in ms :0.7760524749755859
+binary search time in ms: 8.85009765625
+
+dictionary creation time in ms : 0.5006790161132812
+dictionary search time in ms : 0.5779266357421875
+-----------------------
+Timing data for 10000.txt
+list sorting time in ms :9.310007095336914
+binary search time in ms: 123.98552894592285
+
+dictionary creation time in ms : 5.316257476806641
+dictionary search time in ms : 5.854606628417969
+-----------------------
+Timing data for 100000.txt
+list sorting time in ms :104.53486442565918
+binary search time in ms: 1629.8243999481201
+
+dictionary creation time in ms : 66.12777709960938
+dictionary search time in ms : 65.60254096984863
+-----------------------
+Timing data for 1000000.txt
+list sorting time in ms :1407.3638916015625
+binary search time in ms: 21781.607389450073
+
+dictionary creation time in ms : 660.2141857147217
+dictionary search time in ms : 657.0496559143066
+-----------------------
+Timing data for 10000000.txt
+list sorting time in ms :18648.2994556427
+binary search time in ms: 272001.7659664154
+
+dictionary creation time in ms : 6746.116638183594
+dictionary search time in ms : 6830.960035324097
+-----------------------
+yi@yi-Inspiron-5437:~/codes/python/prog3$ 
+
